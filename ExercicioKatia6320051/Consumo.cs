@@ -8,16 +8,15 @@ namespace ExercicioKatia6320051
 {
     public class Consumo : Atividades 
     {
-
+        double valorbarco = 500, valorbuggy = 300, valortrilha = 150;
         public string Barco { get; set; }
         public string Buggy { get; set; }
         public string Trilha { get; set; }
         
         public void Calcular()
         {
-            Console.WriteLine("testando o gitHub222");
-            Console.WriteLine("teste");
+            
         }
-        // precisa incluir os atributos para que seja definido o valor de cada objeto, refri, suco, refeição feitas nos passeios
+        
     }
 }

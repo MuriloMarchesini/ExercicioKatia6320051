@@ -30,18 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ListAtividades = new System.Windows.Forms.CheckedListBox();
+            this.TxtValorTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtRefeicao = new System.Windows.Forms.TextBox();
+            this.TxtRefri = new System.Windows.Forms.TextBox();
+            this.TxtSuco = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtSobremesa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.TxtNumQuarto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -65,22 +66,26 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ATIVIDADES";
             // 
-            // checkedListBox1
+            // ListAtividades
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(44, 75);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(267, 94);
-            this.checkedListBox1.TabIndex = 2;
+            this.ListAtividades.FormattingEnabled = true;
+            this.ListAtividades.Items.AddRange(new object[] {
+            "BUGGY",
+            "LANCHA",
+            "TRILHA"});
+            this.ListAtividades.Location = new System.Drawing.Point(44, 75);
+            this.ListAtividades.Name = "ListAtividades";
+            this.ListAtividades.Size = new System.Drawing.Size(267, 94);
+            this.ListAtividades.TabIndex = 2;
             // 
-            // label3
+            // TxtValorTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(484, 314);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "VALOR TOTAL:";
+            this.TxtValorTotal.AutoSize = true;
+            this.TxtValorTotal.Location = new System.Drawing.Point(484, 314);
+            this.TxtValorTotal.Name = "TxtValorTotal";
+            this.TxtValorTotal.Size = new System.Drawing.Size(84, 13);
+            this.TxtValorTotal.TabIndex = 3;
+            this.TxtValorTotal.Text = "VALOR TOTAL:";
             // 
             // label4
             // 
@@ -109,75 +114,86 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "REFRIGERANTE";
             // 
-            // textBox1
+            // TxtRefeicao
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.TxtRefeicao.Location = new System.Drawing.Point(44, 230);
+            this.TxtRefeicao.Name = "TxtRefeicao";
+            this.TxtRefeicao.Size = new System.Drawing.Size(100, 20);
+            this.TxtRefeicao.TabIndex = 7;
             // 
-            // textBox2
+            // TxtRefri
             // 
-            this.textBox2.Location = new System.Drawing.Point(44, 256);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.TxtRefri.Location = new System.Drawing.Point(44, 256);
+            this.TxtRefri.Name = "TxtRefri";
+            this.TxtRefri.Size = new System.Drawing.Size(100, 20);
+            this.TxtRefri.TabIndex = 8;
             // 
-            // textBox3
+            // TxtSuco
             // 
-            this.textBox3.Location = new System.Drawing.Point(44, 282);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.TxtSuco.Location = new System.Drawing.Point(44, 282);
+            this.TxtSuco.Name = "TxtSuco";
+            this.TxtSuco.Size = new System.Drawing.Size(100, 20);
+            this.TxtSuco.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(150, 285);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "label7";
+            this.label7.Text = "SUCO";
             // 
-            // textBox4
+            // TxtSobremesa
             // 
-            this.textBox4.Location = new System.Drawing.Point(44, 308);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(44, 334);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
+            this.TxtSobremesa.Location = new System.Drawing.Point(44, 308);
+            this.TxtSobremesa.Name = "TxtSobremesa";
+            this.TxtSobremesa.Size = new System.Drawing.Size(100, 20);
+            this.TxtSobremesa.TabIndex = 11;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(150, 311);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 13;
-            this.label8.Text = "label8";
+            this.label8.Text = "SOBREMESA";
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.Location = new System.Drawing.Point(295, 377);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(88, 23);
+            this.BtnSalvar.TabIndex = 15;
+            this.BtnSalvar.Text = "SALVAR";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
+            // TxtNumQuarto
+            // 
+            this.TxtNumQuarto.Location = new System.Drawing.Point(463, 75);
+            this.TxtNumQuarto.Name = "TxtNumQuarto";
+            this.TxtNumQuarto.Size = new System.Drawing.Size(80, 20);
+            this.TxtNumQuarto.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(150, 337);
+            this.label9.Location = new System.Drawing.Point(361, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "N° DO QUARTO";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(285, 314);
+            this.button1.Location = new System.Drawing.Point(389, 377);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "CALCULAR";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "PESQUISAR";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -187,22 +203,24 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.TxtNumQuarto);
+            this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TxtSobremesa);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtSuco);
+            this.Controls.Add(this.TxtRefri);
+            this.Controls.Add(this.TxtRefeicao);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.TxtValorTotal);
+            this.Controls.Add(this.ListAtividades);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Resumo de Atividades e Consumo - Pousada Recando Feliz";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,18 +230,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox ListAtividades;
+        private System.Windows.Forms.Label TxtValorTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtRefeicao;
+        private System.Windows.Forms.TextBox TxtRefri;
+        private System.Windows.Forms.TextBox TxtSuco;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtSobremesa;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.TextBox TxtNumQuarto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
     }

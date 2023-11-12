@@ -10,7 +10,7 @@ namespace ExercicioKatia6320051
     {
         public string Nome { get; set; }
         public string Local { get; set; }
-        public string Data { get; set; }
+        public DateTime Data { get; set; }
         public string Hora { get; set; }
 
         public void Calcular()
