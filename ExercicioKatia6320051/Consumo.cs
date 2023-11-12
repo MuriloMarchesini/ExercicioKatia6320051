@@ -15,7 +15,8 @@ namespace ExercicioKatia6320051
         
         public void Calcular()
         {
-            Console.WriteLine("testando o gitHub");
+            Console.WriteLine("testando o gitHub222");
+            Console.WriteLine("teste");
         }
         // precisa incluir os atributos para que seja definido o valor de cada objeto, refri, suco, refeição feitas nos passeios
     }
