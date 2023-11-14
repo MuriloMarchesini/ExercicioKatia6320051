@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,57 @@ namespace ExercicioKatia6320051
 {
     public partial class Form1 : Form 
     {
+        
+
+        private void Mostraropcoes()
+        {
+            foreach (var opcao in Enum.GetValues(typeof(Opcaopasseio)))
+            {
+                ListAtividades.Items.Add(opcao);
+            }
+        }
+        
+        public enum Opcaopasseio
+        {
+            Buggy,
+            Trilha,
+            Lancha
+        }
         List<Consumo> Lista;
         Consumo consumo = new Consumo();
+        public void PreencherLista()
+        {
+            Consumo novoConsumo = new Consumo();
+            novoConsumo.NumeroQuarto = TxtNumQuarto.Text;
+            novoConsumo.Refeição = TxtRefeicao.Text;
+            novoConsumo.Refri = TxtRefri.Text;
+            novoConsumo.Suco = TxtSuco.Text;
+            novoConsumo.Sobremesa = TxtSobremesa.Text;
+            novoConsumo.Buggy = 
+
+            Lista.Add(novoConsumo);
+
+        }
+        private bool VerificarBuggySelecionado()
+        {
+            foreach (var item in ListAtividades.CheckedItems)
+            {
+                if (item.ToString() == Opcaopasseio.Buggy.ToString())
+                {
+                    // "Buggy" está selecionado
+                    return true;
+                    novoConsumo.
+
+                }
+            }
+            return false;
+        }
         public Form1()
         {
             
             Lista = new List<Consumo>();
             InitializeComponent();
-
+            Mostraropcoes();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -34,22 +78,23 @@ namespace ExercicioKatia6320051
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            Lista.Add(new Consumo());
+            PreencherLista();
             MessageBox.Show("Salvo com sucesso");
-            TxtNumQuarto.Text = consumo.NumeroQuarto; // ainda não ta salvando e falta salvar na lista o numero do quarto para poder pesquisar
-
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e) //botão pesquisar no windows forms
         {
-            if (Lista.Equals(consumo.NumeroQuarto)) // não tenho certeza se está fazendo a comparação correta -- verificarr
+            string numeroquartoprocurado = TxtNumQuarto.Text.Trim();
+            bool existequarto = Lista.Exists(consumo => consumo.NumeroQuarto == numeroquartoprocurado);
+
+            if (existequarto)
             {
-                MessageBox.Show ("Numero certo");
-            }  
+                MessageBox.Show($"Valor dos Passeios:{"Passeios"}\nValor Consumido:{"valor do consumo"}\nValor Total:{"Valor total"}");
+            }
             else
             {
-                MessageBox.Show("Numero errado");
+                MessageBox.Show("Número do quarto não encontrado");
             }
         }
 

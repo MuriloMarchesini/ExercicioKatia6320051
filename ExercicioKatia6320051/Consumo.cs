@@ -12,10 +12,16 @@ namespace ExercicioKatia6320051
       
         
         double valorbarco = 500, valorbuggy = 300, valortrilha = 150;
+
         public string NumeroQuarto { get; set; }
         public string Barco { get; set; }
         public string Buggy { get; set; }
         public string Trilha { get; set; }
+        public string Refeição { get; set; }
+        public string Refri { get; set; }
+        public string Suco { get; set; }
+        public string Sobremesa { get; set; }
+
         
         public void Calcular()
         {

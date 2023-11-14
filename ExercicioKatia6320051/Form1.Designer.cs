@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ListAtividades = new System.Windows.Forms.CheckedListBox();
@@ -49,161 +50,117 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(257, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "POUSADA RECANTO FELIZ";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 43);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ATIVIDADES";
+            this.label2.UseWaitCursor = true;
             // 
             // ListAtividades
             // 
             this.ListAtividades.FormattingEnabled = true;
-            this.ListAtividades.Items.AddRange(new object[] {
-            "BUGGY",
-            "LANCHA",
-            "TRILHA"});
-            this.ListAtividades.Location = new System.Drawing.Point(44, 75);
+            resources.ApplyResources(this.ListAtividades, "ListAtividades");
             this.ListAtividades.Name = "ListAtividades";
-            this.ListAtividades.Size = new System.Drawing.Size(267, 94);
-            this.ListAtividades.TabIndex = 2;
+            this.ListAtividades.UseWaitCursor = true;
             this.ListAtividades.SelectedIndexChanged += new System.EventHandler(this.ListAtividades_SelectedIndexChanged);
             // 
             // TxtValorTotal
             // 
-            this.TxtValorTotal.AutoSize = true;
-            this.TxtValorTotal.Location = new System.Drawing.Point(484, 314);
+            resources.ApplyResources(this.TxtValorTotal, "TxtValorTotal");
             this.TxtValorTotal.Name = "TxtValorTotal";
-            this.TxtValorTotal.Size = new System.Drawing.Size(84, 13);
-            this.TxtValorTotal.TabIndex = 3;
-            this.TxtValorTotal.Text = "VALOR TOTAL:";
+            this.TxtValorTotal.UseWaitCursor = true;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 185);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "CONSUMO NAS ATIVIDADES";
+            this.label4.UseWaitCursor = true;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(150, 233);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "REFEIÇÃO";
+            this.label5.UseWaitCursor = true;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(150, 259);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "REFRIGERANTE";
+            this.label6.UseWaitCursor = true;
             // 
             // TxtRefeicao
             // 
-            this.TxtRefeicao.Location = new System.Drawing.Point(44, 230);
+            resources.ApplyResources(this.TxtRefeicao, "TxtRefeicao");
             this.TxtRefeicao.Name = "TxtRefeicao";
-            this.TxtRefeicao.Size = new System.Drawing.Size(100, 20);
-            this.TxtRefeicao.TabIndex = 7;
+            this.TxtRefeicao.UseWaitCursor = true;
             // 
             // TxtRefri
             // 
-            this.TxtRefri.Location = new System.Drawing.Point(44, 256);
+            resources.ApplyResources(this.TxtRefri, "TxtRefri");
             this.TxtRefri.Name = "TxtRefri";
-            this.TxtRefri.Size = new System.Drawing.Size(100, 20);
-            this.TxtRefri.TabIndex = 8;
+            this.TxtRefri.UseWaitCursor = true;
             // 
             // TxtSuco
             // 
-            this.TxtSuco.Location = new System.Drawing.Point(44, 282);
+            resources.ApplyResources(this.TxtSuco, "TxtSuco");
             this.TxtSuco.Name = "TxtSuco";
-            this.TxtSuco.Size = new System.Drawing.Size(100, 20);
-            this.TxtSuco.TabIndex = 9;
+            this.TxtSuco.UseWaitCursor = true;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(150, 285);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "SUCO";
+            this.label7.UseWaitCursor = true;
             // 
             // TxtSobremesa
             // 
-            this.TxtSobremesa.Location = new System.Drawing.Point(44, 308);
+            resources.ApplyResources(this.TxtSobremesa, "TxtSobremesa");
             this.TxtSobremesa.Name = "TxtSobremesa";
-            this.TxtSobremesa.Size = new System.Drawing.Size(100, 20);
-            this.TxtSobremesa.TabIndex = 11;
+            this.TxtSobremesa.UseWaitCursor = true;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(150, 311);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "SOBREMESA";
+            this.label8.UseWaitCursor = true;
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(295, 377);
+            resources.ApplyResources(this.BtnSalvar, "BtnSalvar");
             this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(88, 23);
-            this.BtnSalvar.TabIndex = 15;
-            this.BtnSalvar.Text = "SALVAR";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.UseWaitCursor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(361, 78);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "N° DO QUARTO";
+            this.label9.UseWaitCursor = true;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // BtnPesquisar
             // 
-            this.BtnPesquisar.Location = new System.Drawing.Point(389, 377);
+            resources.ApplyResources(this.BtnPesquisar, "BtnPesquisar");
             this.BtnPesquisar.Name = "BtnPesquisar";
-            this.BtnPesquisar.Size = new System.Drawing.Size(86, 23);
-            this.BtnPesquisar.TabIndex = 18;
-            this.BtnPesquisar.Text = "PESQUISAR";
             this.BtnPesquisar.UseVisualStyleBackColor = true;
+            this.BtnPesquisar.UseWaitCursor = true;
             this.BtnPesquisar.Click += new System.EventHandler(this.button1_Click);
             // 
             // TxtNumQuarto
             // 
-            this.TxtNumQuarto.Location = new System.Drawing.Point(478, 78);
+            resources.ApplyResources(this.TxtNumQuarto, "TxtNumQuarto");
             this.TxtNumQuarto.Name = "TxtNumQuarto";
-            this.TxtNumQuarto.Size = new System.Drawing.Size(73, 20);
-            this.TxtNumQuarto.TabIndex = 19;
+            this.TxtNumQuarto.UseWaitCursor = true;
             this.TxtNumQuarto.TextChanged += new System.EventHandler(this.TxtNumQuarto_TextChanged_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TxtNumQuarto);
             this.Controls.Add(this.BtnPesquisar);
             this.Controls.Add(this.label9);
@@ -222,7 +179,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Resumo de Atividades e Consumo - Pousada Recando Feliz";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
