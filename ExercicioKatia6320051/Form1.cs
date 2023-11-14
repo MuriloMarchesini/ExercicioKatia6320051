@@ -36,15 +36,14 @@ namespace ExercicioKatia6320051
         {
             Lista.Add(new Consumo());
             MessageBox.Show("Salvo com sucesso");
-            string numeroQuarto = consumo.NumeroQuarto;
-            TxtNumQuarto.Text = numeroQuarto;
+            TxtNumQuarto.Text = consumo.NumeroQuarto; // ainda não ta salvando e falta salvar na lista o numero do quarto para poder pesquisar
 
 
         }
 
         private void button1_Click(object sender, EventArgs e) //botão pesquisar no windows forms
         {
-            if (Lista.Equals(consumo.NumeroQuarto))
+            if (Lista.Equals(consumo.NumeroQuarto)) // não tenho certeza se está fazendo a comparação correta -- verificarr
             {
                 MessageBox.Show ("Numero certo");
             }  
