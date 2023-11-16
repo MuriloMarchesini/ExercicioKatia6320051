@@ -46,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BtnPesquisar = new System.Windows.Forms.Button();
             this.TxtNumQuarto = new System.Windows.Forms.TextBox();
+            this.BtnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +73,7 @@
             resources.ApplyResources(this.TxtValorTotal, "TxtValorTotal");
             this.TxtValorTotal.Name = "TxtValorTotal";
             this.TxtValorTotal.UseWaitCursor = true;
+            this.TxtValorTotal.Click += new System.EventHandler(this.TxtValorTotal_TextChanged);
             // 
             // label4
             // 
@@ -157,10 +159,19 @@
             this.TxtNumQuarto.UseWaitCursor = true;
             this.TxtNumQuarto.TextChanged += new System.EventHandler(this.TxtNumQuarto_TextChanged_1);
             // 
+            // BtnCalcular
+            // 
+            resources.ApplyResources(this.BtnCalcular, "BtnCalcular");
+            this.BtnCalcular.Name = "BtnCalcular";
+            this.BtnCalcular.UseVisualStyleBackColor = true;
+            this.BtnCalcular.UseWaitCursor = true;
+            this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.TxtNumQuarto);
             this.Controls.Add(this.BtnPesquisar);
             this.Controls.Add(this.label9);
@@ -204,6 +215,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnPesquisar;
         private System.Windows.Forms.TextBox TxtNumQuarto;
+        private System.Windows.Forms.Button BtnCalcular;
     }
 }
 

@@ -11,10 +11,10 @@ namespace ExercicioKatia6320051
     {
       
         
-        double valorbarco = 500, valorbuggy = 300, valortrilha = 150;
-
+        double valorPlancha = 500, valorPbuggy = 300, valorPtrilha = 150;
+        double valorTotal;
         public string NumeroQuarto { get; set; }
-        public string Barco { get; set; }
+        public string Lancha { get; set; }
         public string Buggy { get; set; }
         public string Trilha { get; set; }
         public string Refeição { get; set; }
