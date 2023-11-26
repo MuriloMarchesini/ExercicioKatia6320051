@@ -12,6 +12,7 @@ namespace ExercicioKatia6320051
       
         
         double valorPlancha = 500, valorPbuggy = 300, valorPtrilha = 150;
+        double valortotalLancha, valortotalBuggy, valortotalTrilha;
         double valorTotal;
         public string NumeroQuarto { get; set; }
         public string Lancha { get; set; }

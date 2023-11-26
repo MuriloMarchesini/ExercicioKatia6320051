@@ -62,6 +62,7 @@
             // 
             // ListAtividades
             // 
+            this.ListAtividades.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ListAtividades.FormattingEnabled = true;
             resources.ApplyResources(this.ListAtividades, "ListAtividades");
             this.ListAtividades.Name = "ListAtividades";
@@ -161,6 +162,7 @@
             // 
             // BtnCalcular
             // 
+            this.BtnCalcular.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             resources.ApplyResources(this.BtnCalcular, "BtnCalcular");
             this.BtnCalcular.Name = "BtnCalcular";
             this.BtnCalcular.UseVisualStyleBackColor = true;

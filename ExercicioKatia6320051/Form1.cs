@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ExercicioKatia6320051
 {
-    public partial class Form1 : Form 
+    public partial class Form1 : Form
     {
         double valorPlancha = 500, valorPbuggy = 300, valorPtrilha = 150;
         double valorTotal, valorTotalRef, valorTotalRefri, valorTotalSuco, valorTotalSobremesa;
@@ -26,7 +26,7 @@ namespace ExercicioKatia6320051
                 ListAtividades.Items.Add(opcao);
             }
         }
-        
+
         public enum Opcaopasseio
         {
             Buggy,
@@ -43,7 +43,7 @@ namespace ExercicioKatia6320051
             novoConsumo.Refri = TxtRefri.Text;
             novoConsumo.Suco = TxtSuco.Text;
             novoConsumo.Sobremesa = TxtSobremesa.Text;
-            
+
             Lista.Add(novoConsumo);
 
         }
@@ -76,6 +76,22 @@ namespace ExercicioKatia6320051
 
             }
         }
+        public void VerificarLanchaSelecionado(object sender, ItemCheckEventArgs e)
+        {
+            if (ListAtividades.Items[e.Index].ToString() == "Lancha")
+            {
+                if (e.NewValue == CheckState.Checked)
+                {
+                    valorlancha = 1;
+                }
+                else if (e.NewValue == CheckState.Unchecked)
+                {
+                    valorlancha = 0;
+                }
+
+            }
+        }
+
         private void LimparDados()
         {
             TxtRefeicao.Text = "";
@@ -92,53 +108,62 @@ namespace ExercicioKatia6320051
 
         private void TxtValorTotal_TextChanged(object sender, EventArgs e)
         {
-            Calcular();
-            TxtValorTotal.Text = ( $"Valor Total: R${valorlabel}");
+            Calcular(generateConsumo());
+            TxtValorTotal.Text = ($"Valor Total: R${valorlabel}");
 
         }
 
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
-            Calcular();
+            Calcular(consumo);
             TxtValorTotal.Text = ($"Valor Total: R${valorlabel}");
         }
 
-        public void VerificarLanchaSelecionado(object sender, ItemCheckEventArgs e)
+    
+        public void Calcular(Consumo consumo)
         {
-                valorlancha = 0;
+            consumo.Refeição=TxtRefeicao.Text;
+            consumo.Refri = TxtRefri.Text;
+            consumo.Suco = TxtSuco.Text;
+            consumo.Sobremesa = TxtSobremesa.Text;
 
-            if (e.NewValue == CheckState.Checked && ListAtividades.Items[e.Index].ToString() == "Lancha")
-            {
-                valorlancha = 1;
-            }
-        }
-        public void Calcular()
-        {
-            double.TryParse(TxtRefeicao.Text, out double valorRefeicao);
-            double.TryParse(TxtRefri.Text, out double valorRefri);
-            double.TryParse(TxtSuco.Text, out double valorSuco);
-            double.TryParse(TxtSobremesa.Text, out double valorSobremesa);
+            double.TryParse(consumo.Refeição, out double valorRefeicao);
+            double.TryParse(consumo.Refri, out double valorRefri);
+            double.TryParse(consumo.Suco, out double valorSuco);
+            double.TryParse(consumo.Sobremesa, out double valorSobremesa);
+            
+            
 
             valorTotalRef = (valorRefeicao * 20);
             valorTotalRefri = (valorRefri * 6);
             valorTotalSuco = (valorSuco * 5);
             valorTotalSobremesa = (valorSobremesa * 15);
 
-            valortotalBuggy = (valorbuggy * valorPbuggy);
-            valortotalTrilha = (valortrilha * valorPtrilha);
-            valortotalLancha = (valorlancha * valorPlancha);
+            valortotalBuggy = valorbuggy * valorPbuggy;
+            valortotalTrilha = valortrilha * valorPtrilha;
+            valortotalLancha = valorlancha * valorPlancha;
 
             var valorLabel = (valorTotalRef + valorTotalRefri + valorTotalSuco + valorTotalSobremesa + valortotalBuggy + valortotalTrilha + valortotalLancha);
             valorlabel = Convert.ToString(valorLabel);
             var valorPasseios = valortotalBuggy + valortotalTrilha + valortotalLancha;
             valorpasseios = Convert.ToString(valorPasseios);
             var valorConsumo = (valorTotalRef + valorTotalRefri + valorTotalSuco + valorTotalSobremesa);
-            valorconsumidototal = Convert.ToString(valorConsumo); ;
+            valorconsumidototal = Convert.ToString(valorConsumo);
 
         }
-        public Form1()
+        private Consumo generateConsumo()
         {
-            
+            Consumo consumo = new Consumo();
+
+            consumo.Refeição = TxtRefeicao.Text;
+            consumo.Refri = TxtRefri.Text;
+            consumo.Suco = TxtSuco.Text;
+            consumo.Sobremesa = TxtSobremesa.Text;
+
+            return consumo;
+
+        }
+        public Form1() {   
             Lista = new List<Consumo>();
             InitializeComponent();
             Mostraropcoes();
@@ -147,8 +172,8 @@ namespace ExercicioKatia6320051
             ListAtividades.ItemCheck += VerificarLanchaSelecionado;
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
+        private void label9_Click(object sender, EventArgs e) { 
+        
             
         }
 
@@ -179,28 +204,21 @@ namespace ExercicioKatia6320051
             string numeroquartoprocurado = TxtNumQuarto.Text.Trim();
 
             Consumo consumoEncontrado = Lista.Find(consumo => consumo.NumeroQuarto == numeroquartoprocurado);
+            Calcular(generateConsumo());
 
             if (consumoEncontrado != null)
             {
              
-                Calcular(consumoEncontrado);
+                Calcular(generateConsumo());
 
                 MessageBox.Show($"Numero Do Quarto:{consumoEncontrado.NumeroQuarto}\nValor dos Passeios:{valorpasseios}\nValor Consumido:{valorconsumidototal}\nValor Total:{valorlabel}");
             }
-            else
+            else // falta resolver aqui os dados que precisam aparecer certo
             {
                 MessageBox.Show("Número do quarto não encontrado");
             }
         }
-
-        
-        public void Calcular(Consumo consumo)
-        {
-            
-        }
-
-
-
+              
         private void ListAtividades_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -217,3 +235,4 @@ namespace ExercicioKatia6320051
         }
     }
 }
+
